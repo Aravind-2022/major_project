@@ -24,7 +24,7 @@ const temp = document.getElementById("temp"),
   weekBtn = document.querySelector(".week"),
   weatherCards = document.querySelector("#weather-cards");
 
-let currentCity = "";
+let currentCity = "delhi";
 let currentUnit = "c";
 let hourlyorWeek = "week";
 
@@ -72,7 +72,7 @@ function getPublicIp() {
     .then((data) => {
       currentCity = data.city;
       getWeatherData(data.city, currentUnit, hourlyorWeek);
-    })
+    })///
     .catch((err) => {
       console.error(err);
     });
